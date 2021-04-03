@@ -15,6 +15,8 @@ public:
 
     /* get */
     int getValue();
+    nodeClass *getLeftNode();
+    nodeClass *getRightNode();
 
     /* cosntructor */
     nodeClass(int initialValue);

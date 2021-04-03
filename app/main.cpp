@@ -8,8 +8,9 @@ using namespace std;
 
 int main(){
 
+    treeClass *tree;
     nodeClass node(1);
+    tree->insertNode(&node);
     cout << node.getValue();
-
     return 0;
 }
