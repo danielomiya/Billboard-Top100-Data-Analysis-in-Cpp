@@ -6,14 +6,15 @@ project(billboard_top100
 
 add_library(nodeLib
             src/nodeClass.cpp
-            src/nodeClass.h)
+            src/nodeClass.hpp)
 
 add_library(treeLib
             src/treeClass.cpp
-            src/treeClass.h)
+            src/treeClass.hpp)
             
 
 add_executable(main app/main.cpp)
 
 target_link_libraries(main PRIVATE nodeLib)
+target_link_libraries(treeLib PRIVATE nodeLib)
 target_link_libraries(main PRIVATE treeLib)

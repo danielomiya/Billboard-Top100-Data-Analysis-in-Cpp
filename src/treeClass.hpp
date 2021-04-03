@@ -1,6 +1,6 @@
 #ifndef treeHeader
 #define treeHeader
-#include "nodeClass.h"
+#include "nodeClass.hpp"
 
 class treeClass{
     
@@ -11,13 +11,18 @@ public:
     /* set */
     void setRoot(nodeClass *Node);
     void insertNode(nodeClass *newNode, nodeClass *treeRoot = nullptr);
+    void insert(int value);
 
 
     /* get */
     nodeClass *getRoot();
 
+    /* print */
+    void inOrder(nodeClass *node = nullptr);
+
     /* constructor */
     treeClass();
+
 };
 
 

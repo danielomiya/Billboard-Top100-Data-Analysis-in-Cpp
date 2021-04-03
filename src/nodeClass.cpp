@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include "nodeClass.h"
+#include "nodeClass.hpp"
 
 
 /* set */

@@ -1,5 +1,5 @@
-#include "../src/treeClass.h"
-#include "../src/nodeClass.h"
+#include "../src/nodeClass.hpp"
+#include "../src/treeClass.hpp"
 
 #include <iostream>
 #include <stdlib.h>
@@ -9,8 +9,6 @@ using namespace std;
 int main(){
 
     treeClass *tree;
-    nodeClass node(1);
-    tree->insertNode(&node);
-    cout << node.getValue();
+    cout << 12345;
     return 0;
 }
