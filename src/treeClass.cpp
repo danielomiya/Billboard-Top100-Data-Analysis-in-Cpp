@@ -3,61 +3,54 @@
 #include "nodeClass.hpp"
 #include "treeClass.hpp"
 
-/* set */
-void treeClass::setRoot(nodeClass *node){
-    root = node;
+/* cosntructor */
+treeClass::treeClass(){
+    root = NULL;
 }
 
-void treeClass::insertNode(nodeClass *newNode, nodeClass *treeRoot){
-    if (treeRoot == nullptr){
-        treeRoot = root;
-    }
-    
-    if (newNode->getValue() > treeRoot->getValue()){
-        if (treeRoot->getRightNode() != nullptr){
-            insertNode(newNode, treeRoot->getRightNode());
+/* set */
+void treeClass::insertNode(int value, nodeClass * treeRoot){
+    if (value < treeRoot->getValue()){
+        if (treeRoot->getLeftNode() == NULL){
+            treeRoot->setLeftNode(new nodeClass(value));
         }
         else{
-            treeRoot->setRightNode(newNode);
-        }  
+            insertNode(value, treeRoot->getLeftNode());
+        }
     }
-    if (newNode->getValue() < treeRoot->getValue()){
-        if (treeRoot->getLeftNode() != nullptr){
-            insertNode(newNode, treeRoot->getLeftNode());
+    else if (value > treeRoot->getValue()){
+        if (treeRoot->getRightNode() == NULL){
+            treeRoot->setRightNode(new nodeClass(value));
         }
         else{
-            treeRoot->setLeftNode(newNode);
+            insertNode(value, treeRoot->getRightNode());
         }
-    }
+    }     
+     
 }
 
 void treeClass::insert(int value){
-    /* ERRO?? Quando insiro isso aqui no main o cout deixa de funcionar */
-    nodeClass * node;
-    node->setValue(value);
-    insertNode(node);
+    if (root == NULL){
+        root = new nodeClass(value);
+    }
+    else{
+        insertNode(value, root);
+    }
 }
 
+
 /* get */
-nodeClass * treeClass::getRoot(){
+nodeClass *treeClass::getRoot(){
     return root;
 }
 
 
 /* print */
-void treeClass::inOrder(nodeClass *node){
-    /*
-    if (node == nullptr){
-        node = root;
-    }
-
-    if (node->getLeftNode() == nullptr && node->getRightNode() == nullptr){
-        std::cout << node->getValue();
-    }
-    if (node->getLeftNode() != nullptr){
+void treeClass::inOrder(nodeClass * node){
+    if (node != NULL){
         inOrder(node->getLeftNode());
+        std::cout << node->getValue() << "\t";
+        inOrder(node->getRightNode());
     }
-    inOrder(node->getRightNode());
-    */
 }
 

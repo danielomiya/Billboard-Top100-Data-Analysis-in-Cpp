@@ -28,8 +28,9 @@ nodeClass *nodeClass::getRightNode(){
     return rightNode;
 }
 
+/* cosntructor */
 nodeClass::nodeClass(int initialValue){
-    nodeClass *rightNode = nullptr;
-    nodeClass *leftNode = nullptr;
+    rightNode = nullptr;
+    leftNode = nullptr;
     value = initialValue;
 }

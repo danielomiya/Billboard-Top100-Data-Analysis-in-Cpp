@@ -8,7 +8,13 @@ using namespace std;
 
 int main(){
 
-    treeClass *tree;
-    cout << 12345;
+    treeClass tree;
+
+    tree.insert(50);
+    tree.insert(40);
+    tree.insert(60);
+    tree.insert(30);
+    tree.inOrder(tree.getRoot());
+
     return 0;
 }

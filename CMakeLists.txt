@@ -15,6 +15,6 @@ add_library(treeLib
 
 add_executable(main app/main.cpp)
 
-target_link_libraries(main PRIVATE nodeLib)
 target_link_libraries(treeLib PRIVATE nodeLib)
+target_link_libraries(main PRIVATE nodeLib)
 target_link_libraries(main PRIVATE treeLib)
