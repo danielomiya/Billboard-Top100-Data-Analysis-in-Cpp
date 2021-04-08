@@ -44,6 +44,28 @@ nodeClass *treeClass::getRoot(){
     return root;
 }
 
+nodeClass *treeClass::searchNode(int value, nodeClass *node){
+    if (value == node->getValue()){
+        return node;
+    }
+    else{
+        if ((value > node->getValue())){
+            if (node->getRightNode() != NULL){
+                return searchNode(value, node->getRightNode());
+            }
+            else{
+                return NULL;
+            }
+        }
+        if (node->getLeftNode() != NULL){
+            return searchNode(value, node->getLeftNode());
+        }
+        else{
+            return NULL;
+        }
+    }
+    return NULL;
+}
 
 /* print */
 void treeClass::inOrder(nodeClass * node){
