@@ -15,9 +15,8 @@ public:
     
 
     /* get */
-    int isRootNULL();
     nodeClass *getRoot();
-    
+    nodeClass *searchNode(int value, nodeClass *node);
 
     /* print */
     void inOrder(nodeClass *node);

@@ -14,7 +14,7 @@ int main(){
     tree.insert(40);
     tree.insert(60);
     tree.insert(30);
-    tree.inOrder(tree.getRoot());
+    cout << tree.searchNode(60, tree.getRoot())->getValue();
 
     return 0;
 }
