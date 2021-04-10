@@ -1,13 +1,13 @@
-#include "../src/nodeClass.hpp"
-#include "../src/treeClass.hpp"
+#include "nodeClass.hpp"
+#include "treeClass.hpp"
 
 #include <iostream>
 #include <stdlib.h>
 
 using namespace std;
 
-int main(){
-
+int main()
+{
     treeClass tree;
 
     tree.insert(50);
