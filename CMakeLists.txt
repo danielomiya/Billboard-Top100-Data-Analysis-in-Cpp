@@ -4,11 +4,12 @@ project(billboard_top100
         VERSION 0.0.1
         LANGUAGES CXX)
 
-file(GLOB HEADERS CONFIGURE_DEPENDS src/*.hpp)
-file(GLOB SOURCES CONFIGURE_DEPENDS src/*.cpp)
+file(GLOB HEADERS CONFIGURE_DEPENDS "${billboard_top100_SOURCE_DIR}/src/*.hpp")
+file(GLOB SOURCES CONFIGURE_DEPENDS "${billboard_top100_SOURCE_DIR}/src/*.cpp")
 
 add_library(treeLib ${SOURCES} ${HEADERS})
-            
+target_include_directories(treeLib PUBLIC src)
+
 add_executable(main app/main.cpp)
 
 target_link_libraries(main PRIVATE treeLib)
