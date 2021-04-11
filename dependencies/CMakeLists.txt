@@ -1,0 +1,5 @@
+set(LIB_CSV csv)
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+find_package(Threads REQUIRED)
+add_library(${LIB_CSV} INTERFACE)
+target_include_directories(${LIB_CSV} INTERFACE .)
