@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.12)
 
-project(billboard_top100
+project(billboard_top100 
         VERSION 0.0.1
         LANGUAGES CXX)
 
@@ -18,3 +18,5 @@ add_executable(main app/main.cpp)
 add_subdirectory(dependencies)
 target_link_libraries(treeLib PRIVATE csv)
 target_link_libraries(main PRIVATE treeLib)
+target_link_libraries(main PRIVATE utils)
+

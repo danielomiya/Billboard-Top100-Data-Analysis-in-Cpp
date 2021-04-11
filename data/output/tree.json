@@ -1,0 +1,132 @@
+{
+	"1":{
+
+		"date":"1958-08-04",
+		"rank":"1",
+		"song":"Poor Little Fool",
+		"artist":"Ricky Nelson",
+		"last_weak":"0",
+		"peak_rank":"1",
+		"weaks_on_board":"1",
+		"root":"True",
+		"father":null,
+		"orientation_n":null
+	},
+	"16":{
+
+		"date":"1958-08-04",
+		"rank":"2",
+		"song":"Patricia",
+		"artist":"Perez Prado And His Orchestra",
+		"last_weak":"0",
+		"peak_rank":"2",
+		"weaks_on_board":"1",
+		"root":"False",
+		"father":"1",
+		"orientation_n":"right"
+	},
+	"7":{
+
+		"date":"1958-08-04",
+		"rank":"3",
+		"song":"Splish Splash",
+		"artist":"Bobby Darin",
+		"last_weak":"0",
+		"peak_rank":"3",
+		"weaks_on_board":"1",
+		"root":"False",
+		"father":"16",
+		"orientation_n":"left"
+	},
+	"6":{
+
+		"date":"1958-08-04",
+		"rank":"5",
+		"song":"When",
+		"artist":"Kalin Twins",
+		"last_weak":"0",
+		"peak_rank":"5",
+		"weaks_on_board":"1",
+		"root":"False",
+		"father":"7",
+		"orientation_n":"left"
+	},
+	"5":{
+
+		"date":"1958-08-04",
+		"rank":"7",
+		"song":"Yakety Yak",
+		"artist":"The Coasters",
+		"last_weak":"0",
+		"peak_rank":"7",
+		"weaks_on_board":"1",
+		"root":"False",
+		"father":"6",
+		"orientation_n":"left"
+	},
+	"4":{
+
+		"date":"1958-08-04",
+		"rank":"9",
+		"song":"Willie And The Hand Jive",
+		"artist":"The Johnny Otis Show",
+		"last_weak":"0",
+		"peak_rank":"9",
+		"weaks_on_board":"1",
+		"root":"False",
+		"father":"5",
+		"orientation_n":"left"
+	},
+	"15":{
+
+		"date":"1958-08-04",
+		"rank":"4",
+		"song":"Hard Headed Woman",
+		"artist":"Elvis Presley With The Jordanaires",
+		"last_weak":"0",
+		"peak_rank":"4",
+		"weaks_on_board":"1",
+		"root":"False",
+		"father":"7",
+		"orientation_n":"right"
+	},
+	"14":{
+
+		"date":"1958-08-04",
+		"rank":"6",
+		"song":"Rebel-'rouser",
+		"artist":"Duane Eddy His Twangy Guitar And The Rebels",
+		"last_weak":"0",
+		"peak_rank":"6",
+		"weaks_on_board":"1",
+		"root":"False",
+		"father":"15",
+		"orientation_n":"left"
+	},
+	"13":{
+
+		"date":"1958-08-04",
+		"rank":"8",
+		"song":"My True Love",
+		"artist":"Jack Scott",
+		"last_weak":"0",
+		"peak_rank":"8",
+		"weaks_on_board":"1",
+		"root":"False",
+		"father":"14",
+		"orientation_n":"left"
+	},
+	"12":{
+
+		"date":"1958-08-04",
+		"rank":"10",
+		"song":"Fever",
+		"artist":"Peggy Lee",
+		"last_weak":"0",
+		"peak_rank":"10",
+		"weaks_on_board":"1",
+		"root":"False",
+		"father":"13",
+		"orientation_n":"left"
+	}
+}

@@ -1,11 +1,21 @@
 #include "nodeClass.hpp"
 #include "treeClass.hpp"
-#include <iostream>
 #include "fileReaderClass.hpp"
+#include "../src/utils.hpp"
+
+int main(int argc, char *argv[]) {
+
+#include <iostream>
+#include <stdlib.h>
+#include <fstream>
+
 
 using namespace std;
 
-int main(int argc, char *argv[]) {
+int main(){
+
+    utils u;
+    ifstream myfile;
     treeClass tree;
     fileReaderClass reader("data/billboardData.csv");
 
