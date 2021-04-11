@@ -1,6 +1,9 @@
-#include "../src/nodeClass.hpp"
-#include "../src/treeClass.hpp"
+#include "nodeClass.hpp"
+#include "treeClass.hpp"
+#include "fileReaderClass.hpp"
 #include "../src/utils.hpp"
+
+int main(int argc, char *argv[]) {
 
 #include <iostream>
 #include <stdlib.h>
@@ -14,25 +17,18 @@ int main(){
     utils u;
     ifstream myfile;
     treeClass tree;
+    fileReaderClass reader("data/billboardData.csv");
 
-    myfile.open("../data/billboardData.csv");
+    tree.insert(50);
+    tree.insert(40);
+    tree.insert(60);
+    tree.insert(30);
+    cout << tree.searchNode(60, tree.getRoot())->getValue() << endl;
 
-    std::vector<std::vector<std::string>> table;
-    table = u.readCSV(myfile);
-
-    std::vector<std::string> header = table[0];
-
-    nodeClass root(1, table[1][0], stoi(table[1][1]), table[1][2], table[1][3], stoi(table[1][4]), stoi(table[1][5]), stoi(table[1][6]));
-    tree.setRoot(&root);
-
-    for (int i = 2; i <= 10; i++){
-        tree.insertNode((i * 1283)%17, table[i][0], stoi(table[i][1]), table[i][2], table[i][3], stoi(table[i][4]), stoi(table[i][5]), stoi(table[i][6]), tree.getRoot());
+    auto songs = reader.getData();
+    for (auto &song : songs) {
+        cout << song.artist << endl;
     }
-
-    cout << "oi\n";
-    tree.inOrder(tree.getRoot());
-    tree.outputTree(tree.getRoot());
-    tree.outputClose();
 
     return 0;
 }

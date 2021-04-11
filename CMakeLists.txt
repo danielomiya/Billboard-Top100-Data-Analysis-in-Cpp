@@ -1,26 +1,22 @@
 cmake_minimum_required(VERSION 3.12)
 
-
 project(billboard_top100 
         VERSION 0.0.1
         LANGUAGES CXX)
 
-add_library(nodeLib
-            src/nodeClass.cpp
-            src/nodeClass.hpp)
+set(CMAKE_CXX_STANDARD 14)
 
-add_library(treeLib
-            src/treeClass.cpp
-            src/treeClass.hpp)
+file(GLOB HEADERS CONFIGURE_DEPENDS "${billboard_top100_SOURCE_DIR}/src/*.hpp")
+file(GLOB SOURCES CONFIGURE_DEPENDS "${billboard_top100_SOURCE_DIR}/src/*.cpp")
 
-add_library(utils
-        src/utils.cpp
-        src/utils.hpp)
-            
+add_library(treeLib ${SOURCES} ${HEADERS})
+
+target_include_directories(treeLib PUBLIC src)
 
 add_executable(main app/main.cpp)
 
-target_link_libraries(main PRIVATE utils)
-target_link_libraries(treeLib PRIVATE nodeLib)
-target_link_libraries(main PRIVATE nodeLib)
+add_subdirectory(dependencies)
+target_link_libraries(treeLib PRIVATE csv)
 target_link_libraries(main PRIVATE treeLib)
+target_link_libraries(main PRIVATE utils)
+
