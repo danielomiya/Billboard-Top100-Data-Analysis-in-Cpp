@@ -1,5 +1,5 @@
 #ifndef utilsHeader
-#define utilsheader
+#define utilsHeader
 
 #include <istream>
 #include <string>
@@ -11,4 +11,4 @@ class utils{
         std::vector<std::vector<std::string>> readCSV(std::istream &in);
 };
 
-#endif
+#endif //utilsHeader
