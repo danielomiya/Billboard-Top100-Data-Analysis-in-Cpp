@@ -18,5 +18,3 @@ add_executable(main app/main.cpp)
 add_subdirectory(dependencies)
 target_link_libraries(treeLib PRIVATE csv)
 target_link_libraries(main PRIVATE treeLib)
-target_link_libraries(main PRIVATE utils)
-
